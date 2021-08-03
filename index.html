@@ -9,26 +9,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <button class = "modal_btn" id="SU_modal_btn">회원가입</button>
-        <div class ="modal_Background" id="SU_modal_Background"></div>
-        <div class = "modal_wrap" id = "SU_modal_wrap">
-            <div class = "modalSt">
-                <span class= "Emial">이메일 </span> 
-                <div class = "modalEmail">
-                    <input type ="text" class="inputs" id="inputEmail" placeholder="이메일을 입력하세요">
+    <section class ="Hwang_section">
+        <button class = "modal_btn" id="SU_modal_btn">회원가입</button>
+            <div class ="modal_Background" id="SU_modal_Background"></div>
+            <div class = "modal_wrap" id = "SU_modal_wrap">
+                <div class = "modalSt">
+                    <span class= "Emial">이메일 </span> 
+                    <div class = "modalEmail">
+                        <input type ="text" class="inputs" id="inputEmail" placeholder="이메일을 입력하세요">
+                    </div>
+                    <span class = "Password">비밀번호 </span> 
+                    <div class ="modalPw">
+                        <input type="text" class="inputs" id="inputPassword" placeholder="비밀번호를 입력하세요"> 
+                    </div>
+                    <span class = "R_Password">비밀번호 재입력 </span> 
+                    <div class = "modalR_Pw">
+                        <input type="text" class="inputs" id="inputR_Password" placeholder="비밀번호를 반복입력하세요"> 
+                    </div>
+                    <button class="btn" id="SU_btn">가입하기</button>
+                    <button class="btn" id="SU_cancel">취소</button>
                 </div>
-                <span class = "Password">비밀번호 </span> 
-                <div class ="modalPw">
-                    <input type="text" class="inputs" id="inputPassword" placeholder="비밀번호를 입력하세요"> 
-                </div>
-                <span class = "R_Password">비밀번호 재입력 </span> 
-                <div class = "modalR_Pw">
-                    <input type="text" class="inputs" id="inputR_Password" placeholder="비밀번호를 반복입력하세요"> 
-                </div>
-                <button class="btn" id="SU_btn">가입하기</button>
-                <button class="btn" id="SU_cancel">취소</button>
             </div>
-        </div>
+    </section>
     <script src="modal_btn.js"></script>
 </body>
 </html>
