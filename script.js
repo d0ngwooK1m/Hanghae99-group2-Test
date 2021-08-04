@@ -21,3 +21,33 @@ F_img.addEventListener('mouseout',HideBox)
 
 img_bg.addEventListener('mousemove',FollowMouse)
 F_img.addEventListener('mousemove',FollowMouse)
+
+// 슬라이더
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// 이전/다음 조작
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// 현재 순서
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName('mySlides');
+    let dots = document.getElementsByClassName('dot');
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(' active', '');
+    }
+    slides[slideIndex - 1].style.display = 'block';
+    dots[slideIndex - 1].className += ' active';
+}
