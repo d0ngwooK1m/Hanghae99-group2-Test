@@ -8,9 +8,16 @@ function HideBox(){
     F_img.style.display = 'none';
 }
 
+let count =true;
+function FollowControlCount(){
+    count = !count;
+}
+
 function FollowMouse(e){
-    F_img.style.left = e.clientX +"px";
-    F_img.style.top = e.clientY +"px";
+    if(count){
+        F_img.style.left = e.clientX +"px";
+        F_img.style.top = e.clientY +"px";
+    }
 }
 
 img_bg.addEventListener('mouseover',ShowBox)
@@ -21,6 +28,8 @@ F_img.addEventListener('mouseout',HideBox)
 
 img_bg.addEventListener('mousemove',FollowMouse)
 F_img.addEventListener('mousemove',FollowMouse)
+img_bg.addEventListener('click', FollowControlCount)
+
 
 // 슬라이더
 let slideIndex = 1;
